@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  background-image: url(images/TodoList_background.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 44px;
+  color: #151612;
+  margin: 150px 0 0 0;
+}
+#showDate {
+  font-size: 20px;
+}
+.todo-list {
+  z-index: 1;
+  background-color: #ffffff;
+  width: 470px;
+  margin-top: 3rem;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.109);
+  border-radius: 15px;
+}
+.list-head {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 10px;
+}
+/* input items */
+.add-input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #515050;
+  font-size: 14px;
+  outline: none;
+}
+.add-task {
+  border: none;
+  border-radius: 10px;
+  background-color: #85b1fc;
+  outline: none;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.add-task.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* edit and cross icon */
+.item {
+  z-index: 1;
+  background-color: #ffffff;
+  width: 450px;
+  margin-top: 1rem;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.109);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item h4 {
+  font-size: 20px;
+  color: #151612;
+  font-weight: 500;
+}
+.item.completed h4 {
+  text-decoration: line-through;
+  color: #595858;
+}
+.item-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.item-btn i {
+  font-size: 35px;
+  cursor: pointer;
+}
+.fa-square-xmark {
+  color: #92b7f5;
+}
+.fa-square-check {
+  color: #c3d98ce6;
+}
+
+/* copyright */
+.copyright {
+  padding: 25px 0;
+  font-weight: 300;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.copyright p {
+  padding-left: 2rem;
+  color: #515050db;
+}
